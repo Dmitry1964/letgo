@@ -1,0 +1,24 @@
+-
+  const navLinks = [
+    {
+      href: "#sevice",
+      text: "О сервисе"
+    },
+    {
+      href: "#",
+      text: "Направления"
+    },
+    {
+      href: "#",
+      text: "Попутчики"
+    }
+  ]
+mixin navigation()
+  nav.navigation
+    .nawigation__wrapper
+      svg(width="200", height="50")
+        use(xlink:href="#logo_full")
+      ul.navigation__links
+        each link in navLinks
+          li
+            a(href="linl.href")= link.text
