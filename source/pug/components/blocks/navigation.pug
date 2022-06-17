@@ -1,24 +1,99 @@
--
-  const navLinks = [
-    {
-      href: "#sevice",
-      text: "О сервисе"
-    },
-    {
-      href: "#",
-      text: "Направления"
-    },
-    {
-      href: "#",
-      text: "Попутчики"
-    }
-  ]
-mixin navigation()
-  nav.navigation
-    .nawigation__wrapper
-      svg(width="200", height="50")
-        use(xlink:href="#logo_full")
-      ul.navigation__links
-        each link in navLinks
-          li
-            a(href="linl.href")= link.text
+mixin navigation(headerMods, currentURL)
+  -
+    const navLinks = [
+      {
+        href: "#sevice",
+        text: "О сервисе"
+      },
+      {
+        href: "#",
+        text: "Направления"
+      },
+      {
+        href: "#",
+        text: "Попутчики"
+      }
+    ]
+  -
+    const socialLinks = [
+      {
+        url: "https://yandex.ru",
+        text: "иконка фейсбук",
+        path: "#icon-fb",
+        width: "14",
+        height: "28"
+      },
+      {
+        url: "https://vk.com/",
+        text: "иконка в контакте",
+        path: "#icon-vk",
+        width: "31",
+        height: "16"
+      },
+      {
+        url: "https://www.instagram.com/",
+        text: "иконка инстаграм",
+        path: "#icon-ig",
+        width: "24",
+        height: "24"
+      }
+    ]
+  -
+    const userLinks = [
+      {
+        url: "#",
+        text: "Авторизация",
+        icon_menu: "",
+        icon_nav: "",
+        type: "",
+        width: 0,
+        height: 0,
+        alt: ""
+      },
+      {
+        url: "tel:88005555555",
+        text: "8-800-555-55-55",
+        icon_menu: "icon-phone-menu",
+        icon_nav: "icon-phone-nav",
+        type: "png",
+        width: 50,
+        height: 50,
+        alt: "Иконка телефона - позвонить"
+      },
+      {
+        url: "mailto:mail@htmlacademy",
+        text: "mailto:mail@htmlacademy.ru",
+        icon_menu: "icon-mail-menu",
+        icon_nav: "icon-mail-nav",
+        type: "png",
+        width: 50,
+        height: 50,
+        alt: "Иконка эмаил - написать письмо"
+      }
+    ]
+  .nav.navigation
+    .navigation__wrapper
+      if(currentUrl === "index.html")
+        svg(width="200", height="50")
+          use(xlink:href="#logo_full")
+      else
+        a(href="index.html")
+          svg(width="200", height="50")
+           use(xlink:href="#logo_full")
+      .navigation__menu
+        ul.navigation__menu-links
+          each link in navLinks
+            li
+              a.navigation__link(href=link.href)= link.text
+        ul.navigation__user-links
+          each link in userLinks
+            li
+              a(href=link.url, aria-label=link.alt)
+                +img("content", link.icon_menu, link.type, link.width, link.height, link.alt)
+                span= link.text
+        ul.navigatin__social-links
+          each link in socialLinks
+            li
+              a(href=link.url, aria-label=link.text)
+                svg(width=link.width, height=link.height)
+                  use(xlink:href=link.path)
