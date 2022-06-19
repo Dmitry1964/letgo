@@ -1,0 +1,9 @@
+.navigation__wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+}
+
+.navigation svg {
+	color: $color-default-white;
+}

@@ -69,59 +69,111 @@
     <div class="wrapper">
       <header class="header">
         <div class="container">
-          <div class="nav navigation">
+          <nav class="navigation">
             <div class="navigation__wrapper">
-              <svg width="200" height="50">
-                <use xlink:href="#logo_full"></use>
-              </svg>
-              <div class="navigation__menu">
-                <ul class="navigation__menu-links">
-                  <li><a class="navigation__link" href="#sevice">О сервисе</a></li>
-                  <li><a class="navigation__link" href="#">Направления</a></li>
-                  <li><a class="navigation__link" href="#">Попутчики</a></li>
+              <div class="navigation__logo">
+                <svg width="200" height="50">
+                  <use xlink:href="#logo_full"></use>
+                </svg>
+              </div>
+              <div class="navigation-menu">
+                <ul class="navigation-menu__links">
+                  <li><a href="#sevice">О сервисе</a></li>
+                  <li><a href="#">Направления</a></li>
+                  <li><a href="#">Попутчики</a></li>
+                </ul><a class="navigation-menu__link" href="#" target="blank">Авторизация</a>
+                <ul class="navigation-menu__user-links">
+                  <li><a href="tel:88005555555"><img src="img/content/icon-phone-menu.png" srcset="img/content/icon-phone-menu@2x.png 2x" width="50" height="50" alt="Иконка телефона - позвонить"></a><span>8-800-555-55-55</span></li>
+                  <li><a href="mailto:mail@htmlacademy"><img src="img/content/icon-mail-menu.png" srcset="img/content/icon-mail-menu@2x.png 2x" width="50" height="50" alt="Иконка эмаил - написать письмо"></a><span>mailto:mail@htmlacademy.ru</span></li>
                 </ul>
-                <ul class="navigation__user-links">
-                  <li><a href="#" aria-label=""><img src="img/content/." srcset="img/content/@2x. 2x" width="0" height="0" alt=""><span>Авторизация</span></a></li>
-                  <li><a href="tel:88005555555" aria-label="Иконка телефона - позвонить"><img src="img/content/icon-phone-menu.png" srcset="img/content/icon-phone-menu@2x.png 2x" width="50" height="50" alt="Иконка телефона - позвонить"><span>8-800-555-55-55</span></a></li>
-                  <li><a href="mailto:mail@htmlacademy" aria-label="Иконка эмаил - написать письмо"><img src="img/content/icon-mail-menu.png" srcset="img/content/icon-mail-menu@2x.png 2x" width="50" height="50" alt="Иконка эмаил - написать письмо"><span>mailto:mail@htmlacademy.ru</span></a></li>
-                </ul>
-                <ul class="navigatin__social-links">
-                  <li><a href="https://yandex.ru" aria-label="иконка фейсбук">
+                <ul class="navigation-menu__social-links">
+                  <li><a href="https://yandex.ru" target="blank">
                       <svg width="14" height="28">
                         <use xlink:href="#icon-fb"></use>
                       </svg></a></li>
-                  <li><a href="https://vk.com/" aria-label="иконка в контакте">
+                  <li><a href="https://vk.com/" target="blank">
                       <svg width="31" height="16">
                         <use xlink:href="#icon-vk"></use>
                       </svg></a></li>
-                  <li><a href="https://www.instagram.com/" aria-label="иконка инстаграм">
+                  <li><a href="https://www.instagram.com/" target="blank">
                       <svg width="24" height="24">
                         <use xlink:href="#icon-ig"></use>
                       </svg></a></li>
                 </ul>
               </div>
-            </div>
-          </div><span class="header__logo">Логотип</span>
-          <nav class="main-nav">
-            <button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">
-              <svg width="20" height="20" aria-hidden="true">
-                <use xlink:href="#icon-burger"></use>
-              </svg>
-            </button>
-            <div class="main-nav__wrapper">
-              <ul class="main-nav__list">
-                <li class="main-nav__item"><span class="main-nav__link is-active">Главная</span>
-                </li>
-                <li class="main-nav__item"><a class="main-nav__link" href="#">Страница 2</a>
-                </li>
-                <li class="main-nav__item"><a class="main-nav__link" href="#">Страница 3</a>
-                </li>
-              </ul>
+              <div class="navigation-users">
+                <ul class="navigation-users__links">
+                  <li><a href="tel:88005555555"><img src="img/content/icon-phone-nav.png" srcset="img/content/icon-phone-nav@2x.png 2x" width="50" height="50" alt="Иконка телефона - позвонить"></a></li>
+                  <li><a href="mailto:mail@htmlacademy"><img src="img/content/icon-mail-nav.png" srcset="img/content/icon-mail-nav@2x.png 2x" width="50" height="50" alt="Иконка эмаил - написать письмо"></a></li>
+                  <li><a class="navigation-users__link" href="#">Авторизация</a></li>
+                </ul>
+              </div>
             </div>
           </nav>
+          <div class="header__info">
+            <h2 class="header__title">В&nbsp;путешествие с&nbsp;крутыми попутчиками!</h2><img src="img/content/img-header-desk.png" srcset="img/content/img-header-desk@2x.png 2x" width="431" height="640" alt="Изображение путешественника с чемоданом">
+            <div class="header__desc">
+              <p class="header__slogan">«Лучшее приложение, что я видел в жизни!»</p>
+              <p class="header__author">Мурат Эльтазин<br>главный редактор газеты «гаджетлайф»</p>
+            </div>
+          </div>
         </div>
       </header>
-      <main></main>
+      <main>
+        <section class="promo">
+          <div class="container">
+            <div class="promo__wrapper">
+              <ul class="promo__list">
+                <li class="promo__item" data-number="1">Выберите<br>направление</li>
+                <li class="promo__item" data-number="2">Изучите идеи<br>путешественников</li>
+                <li class="promo__item" data-number="3">Находите тех,<br>кто похож на вас</li>
+                <li class="promo__item" data-number="4">Путешествуйте<br>вместе!</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <nav class="navigation-dawn">
+          <div class="container">
+            <div class="navigation__wrapper"><a href="index.html">
+                <svg width="200" height="50">
+                  <use xlink:href="#logo_full"></use>
+                </svg></a>
+              <div class="navigation-menu">
+                <ul class="navigation-menu__links">
+                  <li><a href="#sevice">О сервисе</a></li>
+                  <li><a href="#">Направления</a></li>
+                  <li><a href="#">Попутчики</a></li>
+                </ul><a class="navigation-menu__link" href="#" target="blank">Авторизация</a>
+                <ul class="navigation-menu__user-links">
+                  <li><a href="tel:88005555555"><img src="img/content/icon-phone-menu.png" srcset="img/content/icon-phone-menu@2x.png 2x" width="50" height="50" alt="Иконка телефона - позвонить"></a><span>8-800-555-55-55</span></li>
+                  <li><a href="mailto:mail@htmlacademy"><img src="img/content/icon-mail-menu.png" srcset="img/content/icon-mail-menu@2x.png 2x" width="50" height="50" alt="Иконка эмаил - написать письмо"></a><span>mailto:mail@htmlacademy.ru</span></li>
+                </ul>
+                <ul class="navigation-menu__social-links">
+                  <li><a href="https://yandex.ru" target="blank">
+                      <svg width="14" height="28">
+                        <use xlink:href="#icon-fb"></use>
+                      </svg></a></li>
+                  <li><a href="https://vk.com/" target="blank">
+                      <svg width="31" height="16">
+                        <use xlink:href="#icon-vk"></use>
+                      </svg></a></li>
+                  <li><a href="https://www.instagram.com/" target="blank">
+                      <svg width="24" height="24">
+                        <use xlink:href="#icon-ig"></use>
+                      </svg></a></li>
+                </ul>
+              </div>
+              <div class="navigation-users">
+                <ul class="navigation-users__links">
+                  <li><a href="tel:88005555555"><img src="img/content/icon-phone-nav.png" srcset="img/content/icon-phone-nav@2x.png 2x" width="50" height="50" alt="Иконка телефона - позвонить"></a></li>
+                  <li><a href="mailto:mail@htmlacademy"><img src="img/content/icon-mail-nav.png" srcset="img/content/icon-mail-nav@2x.png 2x" width="50" height="50" alt="Иконка эмаил - написать письмо"></a></li>
+                  <li><a class="navigation-users__link" href="#">Авторизация</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </main>
       <div class="container"></div>
     </div>
     <script src="js/vendor.min.js"></script>

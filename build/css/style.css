@@ -387,9 +387,33 @@ template {
 @font-face {
   font-style: normal;
   font-weight: 400;
-  font-family: "";
+  font-family: "Bloggersans";
   font-display: swap;
-  src: url("../fonts/.woff2") format("woff2"), url("../fonts/.woff") format("woff");
+  src: url("../fonts/Bloggersans.woff2") format("woff2"), url("../fonts/Bloggersans.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 300;
+  font-family: "Bloggersans";
+  font-display: swap;
+  src: url("../fonts/Bloggersanslight.woff2") format("woff2"), url("../fonts/Bloggersanslight.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Bloggersans";
+  font-display: swap;
+  src: url("../fonts/Bloggersansmedium.woff2") format("woff2"), url("../fonts/Bloggersansmedium.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Bloggersans";
+  font-display: swap;
+  src: url("../fonts/Bloggersansbold.woff2") format("woff2"), url("../fonts/Bloggersansbold.woff") format("woff");
 }
 
 *,
@@ -411,7 +435,7 @@ html {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  font-family: "Placeholder", "Arial", sans-serif;
+  font-family: "Bloggersans", "Arial", sans-serif;
   color: #000000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -612,22 +636,56 @@ button,
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 60px;
 }
 
 .header {
-  padding: 28px 0;
-  background-color: #2c39f2;
+  padding-top: 46px;
+  background-image: url(../img/content/header-back-desk.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #161c35;
 }
 
-.header .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.header__info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr auto 26%;
+  grid-template-columns: 1fr auto 26%;
+  padding-top: 11px;
 }
 
-.header__logo {
+.header__title {
+  font-size: 60px;
+  line-height: 70px;
+  font-weight: 700;
   color: #ffffff;
+  padding-top: 95px;
+  padding-left: 67px;
+  margin: 0;
+}
+
+.header__desc {
+  padding-top: 105px;
+  padding-left: 54px;
+}
+
+.header__slogan {
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: 300;
+  color: #ffffff;
+  padding: 0;
+  margin: 0 0 45px;
+}
+
+.header__author {
+  font-size: 21px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  padding: 0;
+  margin: 0;
 }
 
 .main-nav__list {
@@ -1253,6 +1311,194 @@ button,
   opacity: 1;
 }
 
+.navigation__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr auto;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.navigation svg {
+  color: #ffffff;
+}
+
+.navigation-dawn {
+  padding-top: 18px;
+  padding-bottom: 19px;
+  margin-top: -108px;
+}
+
+.navigation-dawn .navigation-menu__links a {
+  color: #000000;
+}
+
+.navigation-dawn .navigation-menu::before {
+  background-color: #000000;
+}
+
+.navigation-menu {
+  padding-left: 145px;
+  position: relative;
+}
+
+.navigation-menu::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 2px;
+  top: 10px;
+  left: 40px;
+  background-color: #ffffff;
+}
+
+.navigation-menu__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-menu__links a {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.navigation-menu__links li {
+  margin-left: 33px;
+}
+
+.navigation-menu__links li:first-child {
+  margin-left: 0;
+}
+
+.navigation-menu__link {
+  display: none;
+}
+
+.navigation-menu__user-links {
+  display: none;
+}
+
+.navigation-menu__social-links {
+  display: none;
+}
+
+.navigation-users__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation-users__link {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #161c35;
+  text-transform: uppercase;
+  background-color: #ffd74b;
+  padding: 16px 28px 14px;
+  border-radius: 25px;
+  display: block;
+}
+
+.promo {
+  position: relative;
+  top: -235px;
+}
+
+.promo__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 285px;
+  grid-template-columns: 1fr 1fr 1fr 285px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.promo__item {
+  padding: 30px 0;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #161c35;
+  position: relative;
+}
+
+.promo__item::after {
+  content: attr(data-number);
+  position: absolute;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  top: 28px;
+  left: 270px;
+}
+
+.promo__item::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 108px;
+  border-radius: 20px 0 0 20px;
+  top: 0;
+  left: -30px;
+}
+
+.promo__item[data-number="1"] {
+  background-color: #ff8d30;
+  padding-left: 30px;
+  border-radius: 20px 0 0 20px;
+}
+
+.promo__item[data-number="2"] {
+  background-color: #ffa530;
+}
+
+.promo__item[data-number="2"]:before {
+  background-color: #ffa530;
+}
+
+.promo__item[data-number="3"] {
+  background-color: #ffbd30;
+}
+
+.promo__item[data-number="3"]::before {
+  background-color: #ffbd30;
+}
+
+.promo__list .promo__item[data-number="4"] {
+  background-color: #ffd74b;
+  border-radius: 0 20px 20px 0;
+}
+
+.promo__list .promo__item[data-number="4"]::after {
+  left: 240px;
+}
+
+.promo__list .promo__item[data-number="4"]::before {
+  background-color: #ffd74b;
+}
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {
@@ -1305,5 +1551,11 @@ button,
 
   .modal--fit-content .modal__content {
     width: 100%;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .header {
+    background-image: url(../../img/content/header-back-desk@2x.png);
   }
 }

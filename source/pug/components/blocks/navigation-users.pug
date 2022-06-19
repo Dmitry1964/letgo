@@ -1,0 +1,30 @@
+-
+  const linksUser = [
+    {
+      url: "tel:88005555555",
+      text: "8-800-555-55-55",
+      icon: "icon-phone-nav",
+      type: "png",
+      width: 50,
+      height: 50,
+      alt: "Иконка телефона - позвонить"
+    },
+    {
+      url: "mailto:mail@htmlacademy",
+      text: "mailto:mail@htmlacademy.ru",
+      icon: "icon-mail-nav",
+      type: "png",
+      width: 50,
+      height: 50,
+      alt: "Иконка эмаил - написать письмо"
+    }
+  ]
+mixin navigation-users()
+  .navigation-users
+    ul.navigation-users__links
+      each link in linksUser
+        li
+          a(href=link.url)
+            +img("content", link.icon, link.type, link.width, link.height, link.alt)
+      li
+        a.navigation-users__link(href="#") Авторизация

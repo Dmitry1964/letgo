@@ -1,0 +1,13 @@
+.navigation-dawn {
+  padding-top: 18px;
+  padding-bottom: 19px;
+  margin-top: -108px;
+}
+
+.navigation-dawn .navigation-menu__links a {
+  color: $color-default-black;
+}
+
+.navigation-dawn .navigation-menu::before {
+  background-color: $color-default-black;
+}

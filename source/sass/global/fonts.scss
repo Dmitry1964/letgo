@@ -12,10 +12,43 @@
 @font-face {
   font-style: normal;
   font-weight: 400;
-  font-family: "";
+  font-family: "Bloggersans";
 
   font-display: swap;
   src:
-    url("../fonts/.woff2") format("woff2"),
-    url("../fonts/.woff") format("woff");
+    url("../fonts/Bloggersans.woff2") format("woff2"),
+    url("../fonts/Bloggersans.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 300;
+  font-family: "Bloggersans";
+
+  font-display: swap;
+  src:
+    url("../fonts/Bloggersanslight.woff2") format("woff2"),
+    url("../fonts/Bloggersanslight.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Bloggersans";
+
+  font-display: swap;
+  src:
+    url("../fonts/Bloggersansmedium.woff2") format("woff2"),
+    url("../fonts/Bloggersansmedium.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Bloggersans";
+
+  font-display: swap;
+  src:
+    url("../fonts/Bloggersansbold.woff2") format("woff2"),
+    url("../fonts/Bloggersansbold.woff") format("woff");
 }

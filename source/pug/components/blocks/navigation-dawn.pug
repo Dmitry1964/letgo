@@ -1,0 +1,13 @@
+mixin navigation-dawn(headerMods, currentUrl)
+  nav.navigation-dawn
+    .container
+      .navigation__wrapper
+        if(currentUrl === "index.html")
+          svg.navigation__logo(width="200", height="50")
+            use(xlink:href="#logo_full")
+        else
+          a(href="index.html")
+            svg(width="200", height="50")
+             use(xlink:href="#logo_full")
+        +navigation-menu()
+        +navigation-users()

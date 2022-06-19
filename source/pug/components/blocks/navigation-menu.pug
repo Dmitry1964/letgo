@@ -1,0 +1,80 @@
+-
+  const menuLinks = [
+    {
+      url: "#sevice",
+      text: "О сервисе"
+    },
+    {
+      url: "#",
+      text: "Направления"
+    },
+    {
+      url: "#",
+      text: "Попутчики"
+    }
+  ]
+-
+  const socialLinks = [
+    {
+      url: "https://yandex.ru",
+      text: "иконка фейсбук",
+      path: "#icon-fb",
+      width: "14",
+      height: "28"
+    },
+    {
+      url: "https://vk.com/",
+      text: "иконка в контакте",
+      path: "#icon-vk",
+      width: "31",
+      height: "16"
+    },
+    {
+      url: "https://www.instagram.com/",
+      text: "иконка инстаграм",
+      path: "#icon-ig",
+      width: "24",
+      height: "24"
+    }
+  ]
+-
+  const userLinks = [
+    {
+      url: "tel:88005555555",
+      text: "8-800-555-55-55",
+      icon: "icon-phone-menu",
+      type: "png",
+      width: 50,
+      height: 50,
+      alt: "Иконка телефона - позвонить"
+    },
+    {
+      url: "mailto:mail@htmlacademy",
+      text: "mailto:mail@htmlacademy.ru",
+      icon: "icon-mail-menu",
+      type: "png",
+      width: 50,
+      height: 50,
+      alt: "Иконка эмаил - написать письмо"
+    }
+  ]
+
+mixin navigation-menu()
+    .navigation-menu
+      ul.navigation-menu__links
+        each link in menuLinks
+          li
+            a(href=link.url)= link.text
+      a.navigation-menu__link(href="#", target="blank") Авторизация
+      ul.navigation-menu__user-links
+        each link in userLinks
+          li
+            a(href=link.url)
+              +img("content", link.icon, link.type, link.width, link.height, link.alt)
+            span= link.text
+      ul.navigation-menu__social-links
+        each link in socialLinks
+          li
+            a(href=link.url, target="blank")
+              svg(width=link.width, height=link.height)
+                use(xlink:href=link.path)
