@@ -1,0 +1,41 @@
+.about {
+  background-color: $color-midnight;
+  border-radius: 0 0 50px 50px;
+}
+
+.about__wrapper {
+  display: grid;
+  grid-template-columns: 1fr auto
+}
+
+.about__info {
+  padding-top: 42px;
+  padding-left: 70px;
+}
+
+.about__title {
+  @include font(45px, 45px, 700, $color-neon-carrot);
+  margin: 0 0 57px;
+  padding: 0;
+}
+
+.about__desc {
+  @include font(28px, 34px, 300, $color-default-white);
+  margin: 0 0 38px 0;
+  padding: 0;
+}
+
+.about__slogan {
+  @include font(21px, 24px, 700, $color-default-white);
+  max-width: 425px;
+  margin: 0 0 85px;
+  padding: 0;
+}
+
+.about__link {
+  display: inline-block;
+  @include font(24px, 24px, 700, $color-catalina-blue);
+  padding: 29px 130px 27px 32px;
+  background-color: $color-energy-yellow;
+  border-radius: 20px;
+}

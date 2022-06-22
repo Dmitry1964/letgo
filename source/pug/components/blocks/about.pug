@@ -1,0 +1,14 @@
+mixin about()
+  section.about
+    .container
+      .about__wrapper
+        .about__info
+          h2.about__title О сервисе
+          p.about__desc
+            |Любое путешествие веселее с&nbsp;попутчиками, которые на&nbsp;одной волне с&nbsp;тобой!
+            |Делитесь своими идеями путешествий и&nbsp;черпайте вдохновение в&nbsp;чужих.
+          p.about__slogan
+            |А&nbsp;если найдете кого-то близкого по&nbsp;духу&nbsp;&mdash;скорее зовите в&nbsp;совместный трип!
+          a.about__link(href="#") Подробнее
+        .about__image
+          +img("content", "img-about-desk", "png", 630, 660, "Коллаж из карточек потенциальных попутчиков")

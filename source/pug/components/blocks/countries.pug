@@ -1,0 +1,56 @@
+-
+  const countryCard = [
+    {
+      country: "Таиланд",
+      slogan: "Джунгли зовут!",
+      cont: "18321",
+      image: "thailand-desk",
+      type: "jpg",
+      alt: "Фотография, пейзаж месности",
+      flag: "flag-thailand-desk",
+      flagtype: "png"
+    },
+    {
+      country: "Франция",
+      slogan: "Трэ бьен, манифик!",
+      cont: "12518",
+      image: "france-desk",
+      type: "jpg",
+      alt: "Фотография, пейзаж месности",
+      flag: "flag-france-desk",
+      flagtype: "png"
+    },
+    {
+      country: "Чехия",
+      slogan: "Закоулки старой Европы",
+      cont: "5326",
+      image: "czech-desk",
+      type: "jpg",
+      alt: "Фотография, пейзаж месности",
+      flag: "flag-czech-desk",
+      flagtype: "png"
+    }
+  ]
+mixin countries()
+  section.countries
+    .container
+      .countries__wrapper
+        ul.countries__list
+          each item in countryCard
+            li.countries__item
+              .country__item-info
+                h3= item.country
+                p.country__item-slogan= item.slogan
+                p.country__item-cont= item.cont
+                +img("content", item.flag, item.flagtype, 70, 47, `Флаг страны ${item.country}`)
+              .countries__item-image
+                +img("content", item.image, item.type, 186, 140, `${item.alt} страны ${item.country}`)
+        .countries__info
+          h2.countries__title Направления
+          p.countries__desc
+            |Мы&nbsp;не&nbsp;продаем туры
+            |и&nbsp;ничего не&nbsp;рекламируем.
+            |Люди сами пишут о&nbsp;странах,
+            |куда хотели&nbsp;бы отправиться
+            |и&nbsp;чем можно там заняться.
+          a.countries__link(href="#") Показать все

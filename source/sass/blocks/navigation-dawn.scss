@@ -1,6 +1,6 @@
 .navigation-dawn {
-  padding-top: 18px;
-  padding-bottom: 19px;
+  padding-top: 15px;
+  padding-bottom: 13px;
   margin-top: -108px;
 }
 
@@ -10,4 +10,6 @@
 
 .navigation-dawn .navigation-menu::before {
   background-color: $color-default-black;
+  width: 44px;
+  left: 55px;
 }

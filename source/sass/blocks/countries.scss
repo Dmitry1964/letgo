@@ -1,0 +1,101 @@
+.countries {
+  padding-top: 88px;
+  padding-bottom: 87px;
+  background-color: $color-solitude;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    left: 0;
+    top: -49px;
+    background-color: $color-solitude;
+    z-index: -10;
+  }
+}
+
+.countries__wrapper {
+  display: flex;
+  gap: 172px;
+  padding-top: 73px;
+  padding-left: 70px;
+}
+
+.countries__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.countries__item {
+  width: 560px;
+  display: flex;
+  justify-content: space-between;
+  background-color: $color-default-white;
+  margin-bottom: 10px;
+  border-radius: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.country__item-info {
+  padding-left: 30px;
+  padding-top: 24px;
+  flex-grow: 1;
+  position: relative;
+}
+
+.country__item-info h3 {
+  @include font(24px, 24px, 700, $color-default-black);
+  padding: 0;
+  margin: 0 0 4px;
+}
+
+.country__item-slogan {
+  @include font(20px, 20px, 500, $color-very-light-gray);
+  padding: 0;
+  margin: 0 0 23px;
+}
+
+.country__item-cont {
+  @include font(20px, 20px, 500, $color-very-light-gray);
+  padding: 0 0 0 32px;
+  margin: 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/svg/icon-user.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 0;
+    top: calc(50% - 10px);
+  }
+}
+
+.country__item-info img {
+  position: absolute;
+  top: 23px;
+  right: -34px;
+}
+
+.countries__item-image {
+  border-radius: 20px;
+}
+
+.countries__title {
+  @include font(45px, 45px, 700, $color-neon-carrot);
+  margin: 0 0 58px;
+  padding: 5px 0 0;
+}
+
+.countries__desc {
+  @include font(28px, 33px, 300, $color-charcoal);
+}
