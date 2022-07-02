@@ -3,6 +3,7 @@
   padding-bottom: 87px;
   background-color: $color-solitude;
   position: relative;
+  border-radius: 0 0 50px 50px;
 
   &::before {
     content: "";
@@ -21,6 +22,22 @@
   gap: 172px;
   padding-top: 73px;
   padding-left: 70px;
+  padding-bottom: 62px;
+  background-image: url(../img/content/flags-back-desk.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    top: 0;
+    left: 0;
+    background-color: $color-lavender;
+    border-radius: 20px;
+  }
 }
 
 .countries__list {
@@ -36,9 +53,23 @@
   background-color: $color-default-white;
   margin-bottom: 10px;
   border-radius: 20px;
+  position: relative;
+  z-index: 5;
 
   &:last-child {
     margin-bottom: 0;
+    background: linear-gradient(180deg, #FFFFFF 0%, #EDEFF6 100%);
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 560px;
+      height: 81px;
+      top: 60px;
+      left: 0;
+      border-radius: 0 0 20px 20px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(237, 239, 246, 0.9) 100%);
+    }
   }
 }
 
@@ -98,4 +129,16 @@
 
 .countries__desc {
   @include font(28px, 33px, 300, $color-charcoal);
+  margin: 0 0 128px;
+  width:  378px;
+}
+
+.countries__link {
+  @include font(24px, 24px, 700, $color-catalina-blue);
+  padding: 29px 105px 27px 33px;
+  background-color: $color-energy-yellow;
+  border-radius: 20px;
+  background-image: url(../img/svg/polygon.svg);
+  background-repeat: no-repeat;
+  background-position: 230px calc(50%);
 }

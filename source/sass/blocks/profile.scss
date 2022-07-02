@@ -1,0 +1,32 @@
+.profile {
+  padding-top: 107px;
+  padding-bottom: 165px;
+  background-color: $color-solitude;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    left: 0;
+    top: -49px;
+    background-color: $color-solitude;
+    z-index: -10;
+  }
+}
+
+.profile__wrapper {
+  padding: 0 70px;
+}
+
+.profile__title {
+  @include font(45px, 45px, 700, $color-neon-carrot);
+  text-align: center;
+  margin: 0 0 134px;
+}
+
+.profile__list {
+  display: grid;
+  grid-template-columns: 620px 1fr;
+}

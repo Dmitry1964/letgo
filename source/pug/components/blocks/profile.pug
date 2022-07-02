@@ -1,0 +1,14 @@
+mixin profile()
+  section.profile
+    .container
+      .profile__wrapper
+        h2.profile__title Добавьте свой профиль
+        .profole__feature
+          dl.profile__list
+            dt(data-number="1") Базовое размещение
+            dd Бесплатно
+            dt(data-number="2") Вывод на первых позициях
+            dd 99 руб./мес
+            dt(data-number="3") Кастомный цвет карточки
+            dd Кастомный цвет карточки
+          +btn({text: "Показать тарифы для бизнеса"}).btn--profile

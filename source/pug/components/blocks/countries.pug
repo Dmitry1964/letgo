@@ -17,8 +17,7 @@
       image: "france-desk",
       type: "jpg",
       alt: "Фотография, пейзаж месности",
-      flag: "flag-france-desk",
-      flagtype: "png"
+      flag: "flag-france-desk"
     },
     {
       country: "Чехия",
@@ -27,8 +26,7 @@
       image: "czech-desk",
       type: "jpg",
       alt: "Фотография, пейзаж месности",
-      flag: "flag-czech-desk",
-      flagtype: "png"
+      flag: "flag-czech-desk"
     }
   ]
 mixin countries()
@@ -42,13 +40,13 @@ mixin countries()
                 h3= item.country
                 p.country__item-slogan= item.slogan
                 p.country__item-cont= item.cont
-                +img("content", item.flag, item.flagtype, 70, 47, `Флаг страны ${item.country}`)
+                +img("content", item.flag, "png", 70, 47, `Флаг страны ${item.country}`)
               .countries__item-image
-                +img("content", item.image, item.type, 186, 140, `${item.alt} страны ${item.country}`)
+                +img("content", item.image, "jpg", 186, 140, `${item.alt} страны ${item.country}`)
         .countries__info
           h2.countries__title Направления
           p.countries__desc
-            |Мы&nbsp;не&nbsp;продаем туры
+            |Мы&nbsp;не&nbsp;продаем туры<br>
             |и&nbsp;ничего не&nbsp;рекламируем.
             |Люди сами пишут о&nbsp;странах,
             |куда хотели&nbsp;бы отправиться

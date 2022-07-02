@@ -1,0 +1,73 @@
+.user-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 285px;
+  padding-bottom: 27px;
+  border-radius: 20px;
+  background-color: $color-default-white;
+  height: 483px;
+}
+
+.user-card__image {
+  position: relative;
+}
+
+.user-card__image img:first-child {
+  border-radius: 20px 20px 0 0;
+}
+
+.user-card__image img:last-child {
+  position: absolute;
+  top: 20px;
+  left: 22px;
+}
+
+.user-card__countries {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  top: -12px;
+  margin-bottom: 7px;
+}
+
+.user-card__title {
+  @include font(24px, 22px, 700, $color-catalina-blue);
+  text-align: center;
+  margin: 0 0 23px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 4px);
+    left: 46px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $color-salmon;
+  }
+}
+
+.user-card:last-child .user-card__title {
+
+  &::before {
+    background-color: $color-lawn-green;
+  }
+}
+
+.user-card__hashtag {
+  padding: 0 40px;
+  text-align: center;
+  margin: 0 0 24px;
+}
+
+.user-card__transport {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}

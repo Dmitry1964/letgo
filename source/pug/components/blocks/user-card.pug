@@ -1,0 +1,79 @@
+-
+  const userData = [
+    {
+      name: "Таня Фирсова",
+      photo: {
+        url: "user1",
+      },
+      typephoto: "jpg",
+      mark: {
+        url: "mark-user1",
+      },
+      typemark: "png",
+      hashtag: "#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи",
+      countries: ["flag-srilanka-desk", "flag-thailand-desk", "flag-seychelles-desk"],
+      method: {
+        plane: true,
+        bus: false,
+        bicycle: false,
+        run: false
+      },
+    },
+    {
+      name: "Петя Демин",
+      photo: {
+        url: "user2",
+      },
+      typephoto: "jpg",
+      mark: {
+        url: "mark-user2",
+      },
+      typemark: "png",
+      hashtag: "#бургер #бар #футбол #концерт #крафт",
+      countries: ["flag-belgium-desk", "flag-czech-desk"],
+      method: {
+        plane: true,
+        bus: true,
+        bicycle: false,
+        run: true
+      },
+    },
+  ]
+
+mixin user-card()
+  each item in userData
+    article.user-card
+      .user-card__wrapper
+        .user-card__image
+          +img("content", item.photo.url, item.typephoto, 285, 286, "Фото участника")
+          +img("content", item.mark.url, item.typemark, 60, 60, "Марка участника")
+        .user-card__countries
+          each country in item.countries
+            +img("content", country, "png", 35, 24, "флаг")
+        h2.user-card__title= item.name
+        p.user-card__hashtag= item.hashtag
+        .user-card__transport
+          if item.method.plane === true
+            svg(width="25" height="25")
+              use(xlink:href="#icon-plane")
+          else
+            svg(width="25" height="25")
+              use(xlink:href="#icon-plane" style="opacity: 0.15")
+          if item.method.bus === true
+            svg(width="25" height="25")
+              use(xlink:href="#icon-bus")
+          else
+            svg(width="25" height="25")
+              use(xlink:href="#icon-bus" style="opacity: 0.15")
+          if item.method.bicycle === true
+            svg(width="25" height="25")
+              use(xlink:href="#icon-bicycle")
+          else
+            svg(width="25" height="25")
+              use(xlink:href="#icon-bicycle" style="opacity: 0.15")
+          if item.method.run === true
+            svg(width="25" height="25")
+              use(xlink:href="#icon-run")
+          else
+            svg(width="25" height="25")
+              use(xlink:href="#icon-run" style="opacity: 0.15")

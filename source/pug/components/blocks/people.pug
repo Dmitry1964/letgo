@@ -1,0 +1,15 @@
+mixin people()
+  section.people
+    .container
+      .people__wrapper
+        .people__info
+          h2.people__title Попутчики
+          p.people__desc
+            |Все мы индивидуальны и у каждого
+            |свой взгляд на идеальный отдых.
+            |Одному нужен пляж и коктейль,
+            |а&nbsp;другому маршрут для хайкинга.
+          p.people__slogan Теперь можно легко найти&nbsp;единомышленников!
+          a.people__link(href="#") Показать всех
+        .people__image
+          +user-card()
