@@ -18,6 +18,18 @@
 
 .profile__wrapper {
   padding: 0 70px;
+  position:  relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 446px;
+    height: 300px;
+    border-radius: 20px;
+    background-color: $color-lavender;
+    top: 125px;
+    left: 690px;
+  }
 }
 
 .profile__title {
@@ -29,4 +41,79 @@
 .profile__list {
   display: grid;
   grid-template-columns: 620px 1fr;
+  @include font(28px, 28px, 300, $color-charcoal);
+  margin: 0 0 30px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-image: url("../img/content/rates.png");
+    top: 0;
+    right: 0;
+  }
+
+}
+
+.profile__list dt {
+  border-bottom: 1px solid $color-solitude-dark;
+  padding: 19px 0 18px 91px;
+  position: relative;
+
+
+  &:first-of-type {
+    border-top: 1px solid $color-solitude-dark;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    left: 0;
+    top: -5px;
+  }
+
+  &::after {
+    content: attr(data-number);
+    position: absolute;
+    @include font(28px, 28px, 400, $color-default-white);
+    left: 27px;
+    top: 16px;
+  }
+}
+
+.profile__list [data-number="1"]::before {
+  background-color: $color-neon-carrot;
+}
+
+.profile__list [data-number="2"]::before {
+  background-color: $color-supernova;
+}
+
+.profile__list [data-number="3"]::before {
+  background-color: $color-energy-yellow;
+}
+
+.profile__list dd {
+  padding: 19px 0 19px 154px;
+  margin: 0;
+  z-index: 10;
+
+  &:first-of-type {
+    padding-left: 166px;
+  }
+}
+
+.btn--profile {
+  @include font(20px, 20px, 700, $color-midnight-blue);
+  margin: 0;
+  padding: 24px 0 24px 90px;
+  background-color: $color-solitude;
+  background-image: url(../img/content/rates-link-desk.png);
+  background-repeat: no-repeat;
+  background-position: 0 center;
 }

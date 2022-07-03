@@ -1826,7 +1826,7 @@ button,
 .people {
   background-color: #192144;
   padding-top: 130px;
-  padding-bottom: 80px;
+  padding-bottom: 70px;
   position: relative;
   border-radius: 0 0 50px 50px;
 }
@@ -1947,6 +1947,18 @@ button,
 
 .profile__wrapper {
   padding: 0 70px;
+  position: relative;
+}
+
+.profile__wrapper::before {
+  content: "";
+  position: absolute;
+  width: 446px;
+  height: 300px;
+  border-radius: 20px;
+  background-color: #e2e5f2;
+  top: 125px;
+  left: 690px;
 }
 
 .profile__title {
@@ -1963,6 +1975,88 @@ button,
   display: grid;
   -ms-grid-columns: 620px 1fr;
   grid-template-columns: 620px 1fr;
+  font-size: 28px;
+  line-height: 28px;
+  font-weight: 300;
+  color: #444444;
+  margin: 0 0 30px;
+  position: relative;
+}
+
+.profile__list::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-image: url("../img/content/rates.png");
+  top: 0;
+  right: 0;
+}
+
+.profile__list dt {
+  border-bottom: 1px solid #e1e3e9;
+  padding: 19px 0 18px 91px;
+  position: relative;
+}
+
+.profile__list dt:first-of-type {
+  border-top: 1px solid #e1e3e9;
+}
+
+.profile__list dt::before {
+  content: "";
+  position: absolute;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  left: 0;
+  top: -5px;
+}
+
+.profile__list dt::after {
+  content: attr(data-number);
+  position: absolute;
+  font-size: 28px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #ffffff;
+  left: 27px;
+  top: 16px;
+}
+
+.profile__list [data-number="1"]::before {
+  background-color: #ff8d30;
+}
+
+.profile__list [data-number="2"]::before {
+  background-color: #ffbd30;
+}
+
+.profile__list [data-number="3"]::before {
+  background-color: #ffd74b;
+}
+
+.profile__list dd {
+  padding: 19px 0 19px 154px;
+  margin: 0;
+  z-index: 10;
+}
+
+.profile__list dd:first-of-type {
+  padding-left: 166px;
+}
+
+.btn--profile {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #132576;
+  margin: 0;
+  padding: 24px 0 24px 90px;
+  background-color: #edeff6;
+  background-image: url(../img/content/rates-link-desk.png);
+  background-repeat: no-repeat;
+  background-position: 0 center;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
