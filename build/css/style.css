@@ -862,7 +862,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 500px;
   padding: 20px 0;
   /*&.is-valid {
     input {
@@ -895,10 +894,6 @@ button,
   -ms-flex-positive: 1;
   flex-grow: 1;
   min-height: 40px;
-  margin-left: 30px;
-  padding: 10px;
-  border: 2px solid rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
   outline: none;
   -webkit-transition: border 0.3s ease;
   -o-transition: border 0.3s ease;
@@ -1932,6 +1927,7 @@ button,
   padding-bottom: 165px;
   background-color: #edeff6;
   position: relative;
+  border-radius: 0 0 50px 50px;
 }
 
 .profile::before {
@@ -1989,6 +1985,7 @@ button,
   width: 200px;
   height: 200px;
   background-image: url("../img/content/rates.png");
+  background-repeat: no-repeat;
   top: 0;
   right: 0;
 }
@@ -2006,11 +2003,11 @@ button,
 .profile__list dt::before {
   content: "";
   position: absolute;
-  width: 68px;
-  height: 68px;
+  width: 67px;
+  height: 67px;
   border-radius: 50%;
   left: 0;
-  top: -5px;
+  top: 0px;
 }
 
 .profile__list dt::after {
@@ -2021,7 +2018,7 @@ button,
   font-weight: 400;
   color: #ffffff;
   left: 27px;
-  top: 16px;
+  top: 20px;
 }
 
 .profile__list [data-number="1"]::before {
@@ -2057,6 +2054,164 @@ button,
   background-image: url(../img/content/rates-link-desk.png);
   background-repeat: no-repeat;
   background-position: 0 center;
+}
+
+.feedback {
+  padding-top: 109px;
+  padding-bottom: 103px;
+  background-color: #192144;
+  position: relative;
+}
+
+.feedback::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  left: 0;
+  top: -49px;
+  background-color: #192144;
+  z-index: -10;
+}
+
+.feedback__title {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 700;
+  color: #ff8d30;
+  text-align: center;
+  margin: 0 0 57px;
+}
+
+.feedback__info {
+  font-size: 28px;
+  line-height: 31px;
+  font-weight: 300;
+  color: #ffffff;
+  max-width: 655px;
+  margin: 0 0 60px 343px;
+  text-align: center;
+}
+
+.feedback__info--prim {
+  margin: 0 0 43px 330px;
+}
+
+.feedback__info a {
+  color: #ffd74b;
+  text-decoration: underline;
+}
+
+.feedback__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 70px;
+  margin-bottom: 70px;
+}
+
+.feedback__form div {
+  padding: 0;
+}
+
+.feedback__form input {
+  width: 850px;
+  height: 81px;
+  border-radius: 20px 0 0 20px;
+  padding-left: 36px;
+  border: none;
+}
+
+.feedback__form input::-webkit-input-placeholder {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #444444;
+  opacity: 0.3;
+}
+
+.feedback__form input::-moz-placeholder {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #444444;
+  opacity: 0.3;
+}
+
+.feedback__form input:-ms-input-placeholder {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #444444;
+  opacity: 0.3;
+}
+
+.feedback__form input::-ms-input-placeholder {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #444444;
+  opacity: 0.3;
+}
+
+.feedback__form input::placeholder {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #444444;
+  opacity: 0.3;
+}
+
+.btn--feedback {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #1d2e5b;
+  width: 330px;
+  height: 81px;
+  border-radius: 0 20px 20px 0;
+  border: none;
+  margin: 0;
+  background-color: #ffd74b;
+  padding: 28px 60px 27px 42px;
+  background-image: url(../img/svg/polygon.svg);
+  background-repeat: no-repeat;
+  background-position: 280px;
+}
+
+.feedback__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-left: 226px;
+  gap: 100px;
+}
+
+.btn--link {
+  font-size: 28px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #ffd74b;
+  text-transform: uppercase;
+  padding: 31px 0 31px 130px;
+  background-color: inherit;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 90px 90px;
+}
+
+.btn--link:first-of-type {
+  background-image: url("../img/content/icon-phone-menu.png");
+}
+
+.btn--link:last-of-type {
+  background-image: url("../img/content/icon-mail-menu.png");
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {

@@ -1,0 +1,105 @@
+.feedback {
+  padding-top: 109px;
+  padding-bottom: 103px;
+  background-color: $color-midnight;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    left: 0;
+    top: -49px;
+    background-color: $color-midnight;
+    z-index: -10;
+  }
+}
+
+.feedback__title {
+  @include font(45px, 45px, 700, $color-neon-carrot);
+  text-align: center;
+  margin: 0 0 57px;
+}
+
+.feedback__info {
+  @include font(28px, 31px, 300, $color-default-white);
+  max-width: 655px;
+  margin: 0 0 60px 343px;
+  text-align: center;
+
+  &--prim {
+    margin: 0 0 43px 330px;
+  }
+}
+
+.feedback__info a {
+  color: $color-energy-yellow;
+  text-decoration: underline;
+}
+
+.feedback__form {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 70px;
+  margin-bottom: 70px;
+}
+
+.feedback__form div {
+  padding: 0;
+}
+
+.feedback__form input {
+  width: 850px;
+  height: 81px;
+  border-radius: 20px 0 0 20px;
+  padding-left: 36px;
+  border: none;
+
+  &::placeholder {
+    @include font(24px, 24px, 700, $color-charcoal);
+    opacity: 0.3;
+  }
+}
+
+.btn--feedback {
+  @include font(24px, 24px, 700, $color-catalina-blue);
+  width: 330px;
+  height: 81px;
+  border-radius: 0 20px 20px 0;
+  border: none;
+  margin: 0;
+  background-color: $color-energy-yellow;
+  padding: 28px 60px 27px 42px;
+  background-image: url(../img/svg/polygon.svg);
+  background-repeat: no-repeat;
+  background-position: 280px;
+}
+
+.feedback__links {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 226px;
+  // justify-content: center;
+  gap: 100px;
+}
+
+.btn--link {
+  @include font(28px, 28px, 700, $color-energy-yellow);
+  text-transform: uppercase;
+  padding: 31px 0 31px 130px;
+  background-color: inherit;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 90px 90px;
+
+
+  &:first-of-type {
+    background-image: url("../img/content/icon-phone-menu.png");
+  }
+
+  &:last-of-type {
+    background-image: url("../img/content/icon-mail-menu.png");
+  }
+}

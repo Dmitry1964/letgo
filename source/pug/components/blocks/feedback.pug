@@ -1,0 +1,15 @@
+mixin feedback()
+  section.feedback
+    .container
+      .feedback__wrapper
+        h2.feedback__title Заинтересовались?
+        p.feedback__info
+          |Зарегистрируйтесь, это быстро и бесплатно!<br>
+          |Уже зарегистрированы? Тогда скорее #[a(href="#") авторизуйтесь.]
+        form.feedback__form
+          +custom-input({inputError: "Не корректный email", inputName: "user-email", inputPlaceholder: "E-mail"})(data-validate-type="email")
+          +btn({href: "#", text: "Регистрация"}).btn--feedback
+        p.feedback__info.feedback__info--prim Остались вопросы? Мы с радостью на них ответим!
+        .feedback__links
+          +btn({href: "tel:88005558628", text: "8 800 555-86-28"}).btn--link
+          +btn({href: "mailto:mail@htmlacademy.ru", text: "mail@htmlacademy.ru"}).btn--link

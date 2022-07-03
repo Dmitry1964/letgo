@@ -3,7 +3,7 @@
   position: relative;
 
   display: flex;
-  width: 500px;
+  // width: 500px;
   padding: 20px 0;
 
   label {
@@ -15,11 +15,11 @@
     textarea {
       flex-grow: 1;
       min-height: 40px;
-      margin-left: 30px;
-      padding: 10px;
+      // margin-left: 30px;
+      // padding: 10px;
 
-      border: 2px solid rgba($color-default-black, 0.2);
-      border-radius: 5px;
+      // border: 2px solid rgba($color-default-black, 0.2);
+      // border-radius: 5px;
       outline: none;
 
       transition: border $trans-default;

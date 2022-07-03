@@ -3,6 +3,7 @@
   padding-bottom: 165px;
   background-color: $color-solitude;
   position: relative;
+  border-radius: 0 0 50px 50px;
 
   &::before {
     content: "";
@@ -51,6 +52,7 @@
     width: 200px;
     height: 200px;
     background-image: url("../img/content/rates.png");
+    background-repeat: no-repeat;
     top: 0;
     right: 0;
   }
@@ -70,11 +72,11 @@
   &::before {
     content: "";
     position: absolute;
-    width: 68px;
-    height: 68px;
+    width: 67px;
+    height: 67px;
     border-radius: 50%;
     left: 0;
-    top: -5px;
+    top: 0px;
   }
 
   &::after {
@@ -82,7 +84,7 @@
     position: absolute;
     @include font(28px, 28px, 400, $color-default-white);
     left: 27px;
-    top: 16px;
+    top: 20px;
   }
 }
 
